@@ -1,20 +1,20 @@
 :root {
   --black-1: #090F13;
-  --black-2: #121e26;
+  --blue-0: #687E88;
   --blue-1: #3D606E;
   --blue-2: #30535F;
   --blue-3: #153B47;
   --blue-4: #09191F;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   height: 100%;
   background-color: var(--black-1);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
