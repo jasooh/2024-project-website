@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/react'
+import { Box, Text, Stack } from '@chakra-ui/react'
 import TitleText from './TitleText'
 import Colors from '../const/Colors.json'
 
@@ -13,11 +13,14 @@ export default function Background() {
                 borderStyle='solid'
                 borderWidth='2px'
                 >
-                <Stack direction='column' spacing='0px'>
-                    <Box pl='5rem'>
+                <Box pl='5rem' width='21rem' height='100%'>
+                    <Stack height='100%' 
+                        direction='column' 
+                        spacing='0px'
+                    >
                         <TitleText>JUSTIN ABUYUAN</TitleText>
-                    </Box>
-                </Stack>
+                    </Stack>
+                </Box>
             </Box>
         </Stack>
     )
