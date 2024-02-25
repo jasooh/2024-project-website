@@ -3,8 +3,8 @@ import Colors from "./Colors.json";
 
 const theme = extendTheme({
     fonts: {
-            heading: "'Bebas Neue', sans-serif", // Use Bebas Neue for headings
-            body: "'Montserrat', sans-serif", // Use Montserrat for body text
+            heading: "'Montserrat', sans-serif",
+            body: "'Montserrat', sans-serif",
       },
     colors: {
       brand: {
