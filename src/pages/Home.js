@@ -1,7 +1,8 @@
-import { Box, Text, Stack, Heading, Button } from '@chakra-ui/react'
-import Colors from '../const/Colors.json'
+import { Box, Text, Stack, Heading, Button } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
+import Colors from '../const/Colors.json';
 
-export default function Background() {
+export default function HomePage() {
     return (
         <Stack width='100vw' height='100vh' position='absolute'
             alignItems='center'
@@ -12,12 +13,13 @@ export default function Background() {
                     borderStyle='solid'
                     borderWidth='0.01rem'
                 >
-                {/* Heading - name */}
+                {/* Heading container */}
                 <Box pl='5rem' width='21rem' height='100%'>
                     <Stack height='100%' 
                         direction='column'
                         spacing='0px'
                     >
+                        {/* Heading text and subheading */}
                         <Heading
                             width='20rem'
                             margin='0px'
@@ -30,11 +32,18 @@ export default function Background() {
                         >
                             JUSTIN ABUYUAN
                         </Heading>
-                        <Text fontSize='15px' lineHeight='0px' mb='50px'>const compSciStudent;</Text>
-                        {/* <Button colorScheme='blue'>Button</Button> */}
-                        <Text fontSize='20px' margin='0px'>ABOUT;</Text>
-                        <Text fontSize='20px' margin='0px'>PROJECTS;</Text>
-                        <Text fontSize='20px' margin='0px'>CONTACT;</Text>
+                        <Text fontSize='15px' lineHeight='0px' mb='100px'>const compSciStudent = true;</Text>
+
+                        {/* React router */}
+                        <Text fontSize='20px' margin='0px'>
+                            <Link to='/about'>ABOUT;</Link>
+                        </Text>
+                        <Text fontSize='20px' margin='0px'>
+                            <Link to='/projects'>PROJECTS;</Link>
+                        </Text>
+                        <Text fontSize='20px' margin='0px'>
+                            <Link to='/contact'>CONTACT;</Link>
+                        </Text>
                     </Stack>
                 </Box>
             </Box>
