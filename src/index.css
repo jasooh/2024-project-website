@@ -1,35 +1,4 @@
-/* Colors */
-
-:root {
-  --black: #0d0d0d;
-  --white: #FFFFFF;
-  --light-white: #ababab;
-}
-
-/* Background */
-
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  background-color: var(--black);
-}
-
 /* Fonts */
-
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Headings */
-h2 {
-  font-family: 'Bebas Neue', sans-serif;
-  color: var(--black);
-  text-shadow: 1px 1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF;
-
-}
-
-/* Text */
-p {
-  font-family: 'Montserrat', sans-serif;
-  color: var(--light-white);
-}

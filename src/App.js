@@ -1,8 +1,13 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import Background from './components/Background';
+import theme from './const/Theme';
+
 
 function App() {
   return (
-    <Background/>
+    <ChakraProvider theme={theme}>
+      <Background/>
+    </ChakraProvider>
   );
 }
 
