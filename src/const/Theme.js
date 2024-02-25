@@ -23,7 +23,7 @@ const theme = extendTheme({
         },
         'h2': {
             color: 'brand.black',
-            textShadow: '1px 1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF'
+            textShadow: '1px 1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF' // outline effect
         },
         'p': {
             color: 'brand.lightWhite'

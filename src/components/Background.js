@@ -24,9 +24,9 @@ export default function Background() {
                             mt='80px'
                             mb='15px'
                             pb='0px'
-                            fontSize='84px'
-                            letterSpacing='1px'
-                            lineHeight='4.5rem'
+                            fontSize='100px'
+                            letterSpacing='-2px'
+                            lineHeight='5.5rem'
                         >
                             JUSTIN ABUYUAN
                         </Heading>
