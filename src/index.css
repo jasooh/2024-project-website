@@ -1,26 +1,35 @@
+/* Colors */
+
 :root {
-  --black-1: #090F13;
-  --blue-0: #687E88;
-  --blue-1: #3D606E;
-  --blue-2: #30535F;
-  --blue-3: #153B47;
-  --blue-4: #09191F;
+  --black: #0d0d0d;
+  --white: #FFFFFF;
+  --light-white: #ababab;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* Background */
 
 body {
   margin: 0;
   padding: 0;
   height: 100%;
-  background-color: var(--black-1);
-  font-family: "Bebas Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--black);
+}
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Headings */
+h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  color: var(--black);
+  text-shadow: 1px 1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px -1px 0 #FFFFFF;
 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Text */
+p {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--light-white);
 }

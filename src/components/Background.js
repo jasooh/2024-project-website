@@ -1,5 +1,4 @@
-import { Box, Text, Stack } from '@chakra-ui/react'
-import TitleText from './TitleText'
+import { Box, Text, Stack, Heading } from '@chakra-ui/react'
 import Colors from '../const/Colors.json'
 
 export default function Background() {
@@ -9,16 +8,31 @@ export default function Background() {
             justifyContent='center'
         >
             <Box width='96vw' height='92vh' position='absolute'
-                borderColor={Colors['blue-0']}
-                borderStyle='solid'
-                borderWidth='2px'
+                    borderColor={Colors['white']}
+                    borderStyle='solid'
+                    borderWidth='0.01rem'
                 >
+                {/* Heading - name */}
                 <Box pl='5rem' width='21rem' height='100%'>
                     <Stack height='100%' 
-                        direction='column' 
+                        direction='column'
                         spacing='0px'
                     >
-                        <TitleText>JUSTIN ABUYUAN</TitleText>
+                        <Heading
+                            width='20rem'
+                            margin='0px'
+                            mt='80px'
+                            pb='0px'
+                            fontSize='84px'
+                            letterSpacing='1px'
+                            lineHeight='4.5rem'
+                        >
+                            JUSTIN ABUYUAN
+                        </Heading>
+                        <Text fontSize='15px' lineHeight='0px' mb='50px'>COMPUTER SCIENCE STUDENT</Text>
+                        <Text fontSize='20px' margin='0px'>ABOUT</Text>
+                        <Text fontSize='20px' margin='0px'>PROJECTS</Text>
+                        <Text fontSize='20px' margin='0px'>CONTACT</Text>
                     </Stack>
                 </Box>
             </Box>
