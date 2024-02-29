@@ -15,6 +15,9 @@ const theme = extendTheme({
     },
     styles: {
       global: {
+        'html': {
+          userSelect: 'none'
+        },
         'body': {
             margin: 0,
             padding: 0,

@@ -44,9 +44,10 @@ export default function HomePage() {
                         </Text>
 
                         {/* React router */}
+                        <MenuButton link='/'>HOME;</MenuButton>
                         <MenuButton link='/about'>ABOUT;</MenuButton>
-                        <MenuButton link='/about'>PROJECTS;</MenuButton>
-                        <MenuButton link='/about'>CONTACT;</MenuButton>
+                        <MenuButton link='/projects'>PROJECTS;</MenuButton>
+                        <MenuButton link='/contact'>CONTACT;</MenuButton>
                     </Stack>
                 </Box>
             </Box>
