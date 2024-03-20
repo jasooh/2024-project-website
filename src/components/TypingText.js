@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Text } from '@chakra-ui/react';
+import { Text, Box, Stack } from '@chakra-ui/react';
+import { keyframes } from '@emotion/react';
+
+const blink = keyframes`
+  from, to { opacity: 1 }
+  50% { opacity: 0 }
+`;
 
 export default function TypingText({ children }) {
   const [content, setContent] = useState('');
@@ -10,9 +16,17 @@ export default function TypingText({ children }) {
       setTimeout(() => {
         setContent(content + children.charAt(index));
         setIndex(index + 1);
-      }, 100); // 150 ms delay between each character
+      }, 20); // 20 ms delay between each character
     }
   }, [index, children]);
 
-  return <Text>{content}</Text>;
+  return (
+    <>
+      <Stack direction='row'>
+        <Text width='max'>{content}</Text>
+        {/* Cursor effect */}
+        <Box marginLeft="-3px" backgroundColor="currentcolor" width="1px" height="1.2em" animation={`${blink} 1s step-start infinite`} />
+      </Stack>
+    </>
+  );
 }
