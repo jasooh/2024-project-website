@@ -1,4 +1,4 @@
-import { Box, Text, Stack, Heading, Button } from '@chakra-ui/react';
+import { Box, Text, Stack, Heading, Slide } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import MenuButton from '../components/MenuButton';
 
@@ -10,14 +10,10 @@ export default function HomePage() {
             alignItems='center'
             justifyContent='center'
         >
-            <Box width='96vw' height='92vh' position='absolute'
-                    borderColor={Colors['white']}
-                    borderStyle='solid'
-                    borderWidth='0.01rem'
-                >
-                {/* Heading container */}
-                <Box pl='5rem' width='40rem' height='100%'>
-                    <Stack height='100%' 
+            <Box width='60vw' height='92vh' position='absolute'>
+                {/* Heading and Button container */}
+                <Box width='40rem' height='100%'>
+                    <Stack height='100%'
                         direction='column'
                         spacing='0px'
                     >
@@ -36,11 +32,11 @@ export default function HomePage() {
                         >
                             JUSTIN ABUYUAN
                         </Heading>
-                        <Text mb='50px' width='100%'
-                            fontSize='15px' fontWeight='100'
-                            lineHeight='0px'
+                        <Text mt='5px'
+                            mb='50px' width='100%'
+                            fontSize='16px' fontWeight='300'
                         >
-                            const compSciStudent = true;
+                            First Year Waterloo Engineering Student
                         </Text>
 
                         {/* React router */}
