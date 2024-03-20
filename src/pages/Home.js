@@ -1,5 +1,6 @@
 import { Box, Text, Stack, Heading } from '@chakra-ui/react';
 import MenuButton from '../components/MenuButton';
+import TypingText from '../components/TypingText';
 
 import Colors from '../const/Colors.json';
 
@@ -41,11 +42,11 @@ export default function HomePage() {
                             mb='50px' width='100%'
                             fontSize='16px' fontWeight='300'
                         >
-                            i like to code stuff.
+                            <TypingText>i like to code stuff.</TypingText>
                         </Text>
                         {/* React router */}
-                        <MenuButton link='/'>HOME;</MenuButton>
-                        <MenuButton link='/about'>ABOUT;</MenuButton>
+                        <MenuButton link='/'>ABOUT;</MenuButton>
+                        <MenuButton link='/about'>EXPERIENCE;</MenuButton>
                         <MenuButton link='/projects'>PROJECTS;</MenuButton>
                         <MenuButton link='/contact'>CONTACT;</MenuButton>
                     </Stack>
