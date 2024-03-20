@@ -3,8 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import theme from './const/Theme';
 
-import Home from './pages/Home';
 import About from './pages/About';
+import Experience from './pages/Experience'; 
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
@@ -13,10 +13,10 @@ function App() {
     <ChakraProvider theme={theme}>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<Home />} />
-          <Route path='/projects' element={<Home />} />
-          <Route path='/contact' element={<Home />} />
+          <Route path='/about' element={<About />} />
+          <Route path='/experience' element={<Experience />} />
+          <Route path='/projects' element={<About />} />
+          <Route path='/contact' element={<About />} />
         </Routes>
       </BrowserRouter>
     </ChakraProvider>
