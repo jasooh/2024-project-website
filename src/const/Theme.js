@@ -10,7 +10,8 @@ const theme = extendTheme({
       brand: {
             black: Colors['black'],
             white: Colors['white'],
-            lightWhite: Colors['light-white']
+            lightWhite: Colors['light-white'],
+            yellow: Colors['yellow']
       },
     },
     styles: {
