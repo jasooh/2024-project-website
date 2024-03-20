@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Text, Box, Stack } from '@chakra-ui/react';
 import { keyframes } from '@emotion/react';
 
@@ -11,14 +11,12 @@ export default function TypingText({ children }) {
   const [content, setContent] = useState('');
   const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    if (index < children.length) {
-      setTimeout(() => {
-        setContent(content + children.charAt(index));
-        setIndex(index + 1);
-      }, 20); // 20 ms delay between each character
-    }
-  }, [index, children]);
+  if (index < children.length) {
+    setTimeout(() => {
+      setContent(content + children.charAt(index));
+      setIndex(index + 1);
+    }, 20); // 20 ms delay between each character
+  }
 
   return (
     <>
