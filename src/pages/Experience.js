@@ -6,7 +6,7 @@ import Colors from '../const/Colors.json';
 export default function ExperiencePage() {
     return (
        <HomeSection>
-            <Text>Bruh!</Text>
+            <Text>Experience</Text>
        </HomeSection>
     )
 }

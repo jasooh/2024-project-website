@@ -15,7 +15,7 @@ export default function TypingText({ children }) {
     setTimeout(() => {
       setContent(content + children.charAt(index));
       setIndex(index + 1);
-    }, 20); // 20 ms delay between each character
+    }, 10); // 20 ms delay between each character
   }
 
   return (
