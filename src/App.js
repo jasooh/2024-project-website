@@ -1,6 +1,5 @@
 import { ChakraProvider } from '@chakra-ui/react';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
-import { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import theme from './const/Theme';
 
@@ -12,12 +11,10 @@ import Contact from './pages/Contact';
 import ScrollEvent from './components/Scroll';
 
 function App() {
-
-
   return (
     <ChakraProvider theme={theme}>
       <Router>
-        <ScrollEvent/>
+        <ScrollEvent />
         <Routes>
           <Route path='/' element={<About />} />
           <Route path='/experience' element={<Experience />} />

@@ -6,12 +6,13 @@ import TypingText from '../components/TypingText';
 import Colors from '../const/Colors.json';
 import { Children } from 'react';
 
-const info = {
-    Name: 'JUSTIN ABUYUAN',
-    Sub: "i like to code stuff and cry over the SWE job market."
-}
+export default function HomeSection(props) {
+    const { children, sub } = props;
+    const info = {
+        Name: 'JUSTIN ABUYUAN',
+        Sub: sub
+    }
 
-export default function HomeSection({ children }) {
     return (
         <Stack width='100vw' height='max' position='absolute'
             alignItems='center'
