@@ -23,7 +23,7 @@ export default function TypingText({ children }) {
       <Stack direction='row'>
         <Text width='max'>{content}</Text>
         {/* Cursor effect */}
-        <Box marginLeft="-3px" backgroundColor="currentcolor" width="1px" height="1.2em" animation={`${blink} 1s step-start infinite`} />
+        <Box marginLeft="-5px" backgroundColor="currentcolor" width="1px" height="1.2em" animation={`${blink} 1s step-start infinite`} />
       </Stack>
     </>
   );

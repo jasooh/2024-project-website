@@ -67,8 +67,8 @@ export default function HomeSection(props) {
                 >
                     <font color={Colors['yellow']}>In 2015, I wrote my first ever program in Lua using ROBLOX Studio's game engine. </font> 
                     It was a simple script that teleported the player to another location on the map. <br/><br/>
-                    Even though it was a script with 3 lines of code, this discovery of writing lines in a computer to make stuff do things ignited a fire of passion in me. <br/><br/>
-                    Now, as an aspiring management engineering student at the University of Waterloo, my main field of interest is in artifical intelligence and machine-based learning.
+                    Even though it was a script with 3 lines of code, this discovery of writing lines in a computer to make stuff do things ignited a burning passion in me to innovate and create change through the code I write. <br/><br/>
+                    Now, as an aspiring Management Engineering student at the University of Waterloo, I hope to be at the forefront of this change.
                 
                 </Text>
             </Stack>
