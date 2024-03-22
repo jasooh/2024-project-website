@@ -17,7 +17,7 @@ export default function HomeSection(props) {
             alignItems='center'
             gap='5rem'
         >
-            <Stack width='60vw' height='max' direction={{ base: 'column', "2xl": 'row' }}>
+            <Stack width='60vw' height='max' direction={{ base: 'column', "2xl": 'row' }} id='button-parent'>
                 {/* Heading and Button container */}
                 <Box width='40rem' height='max'>
                     <Stack height='max'
@@ -52,7 +52,7 @@ export default function HomeSection(props) {
                         >
                             <TypingText>{info['Sub']}</TypingText>
                         </Text>
-                        {/* React router */}
+                        {/* React router buttons */}
                         <MenuButton link='/experience'>EXPERIENCE;</MenuButton>
                         <MenuButton link='/projects'>PROJECTS;</MenuButton>
                         <MenuButton link='/contact'>CONTACT;</MenuButton>
@@ -64,11 +64,11 @@ export default function HomeSection(props) {
                     width={{ base: '100%', "2xl": '40%' }} height='max' maxH='50%'
                     mt='3rem'
                 >
-                    <font color={Colors['yellow']}>In 2015, I wrote my first ever program in Lua using ROBLOX Studio's game engine. </font> 
-                    It was a simple script that teleported the player to another location on the map. <br/><br/>
-                    Even though it was a script with 3 lines of code, this discovery of writing lines in a computer to make stuff do things ignited a burning passion in me to innovate and create change through the code I write. <br/><br/>
+                    <font color={Colors['yellow']}>In 2015, I wrote my first ever program in Lua using ROBLOX Studio's game engine. </font>
+                    It was a simple script that teleported the player to another location on the map. <br /><br />
+                    Even though it was a script with 3 lines of code, this discovery of writing lines in a computer to make stuff do things ignited a burning passion in me to innovate and create change through the code I write. <br /><br />
                     Now, as an aspiring Management Engineering student at the University of Waterloo, I hope to be at the forefront of this change.
-                
+
                 </Text>
             </Stack>
             {children}
