@@ -5,7 +5,7 @@ import Colors from '../const/Colors.json';
 
 export default function ContactPage() {
     return (
-       <HomeSection sub="pwease contact meeee~ nyaaa >w<">
+       <HomeSection sub="i check my mail often!">
             <Text height='100vh'>Contact</Text>
        </HomeSection>
     )

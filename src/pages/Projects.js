@@ -5,7 +5,7 @@ import Colors from '../const/Colors.json';
 
 export default function ProjectPage() {
     return (
-        <HomeSection sub="i wowked vewy hawd, pwease hiwre!~ :3">
+        <HomeSection sub="hardware and software based projects are my life!">
             <Text height='100vh'>Projects</Text>
         </HomeSection>
     )
