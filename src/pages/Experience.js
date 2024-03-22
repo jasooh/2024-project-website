@@ -5,7 +5,7 @@ import Colors from '../const/Colors.json';
 
 export default function ExperiencePage() {
     return (
-       <HomeSection sub="working hard to become a software developer, one co-op at a time.">
+       <HomeSection sub="developing skills to become a software engineer - one co-op at a time.">
             <Text height='100vh'>Experience</Text>
        </HomeSection>
     )
