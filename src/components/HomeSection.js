@@ -6,6 +6,11 @@ import TypingText from '../components/TypingText';
 import Colors from '../const/Colors.json';
 import { Children } from 'react';
 
+const info = {
+    Name: 'JUSTIN ABUYUAN',
+    Sub: "i like to code stuff and cry over the SWE job market."
+}
+
 export default function HomeSection({ children }) {
     return (
         <Stack width='100vw' height='max' position='absolute'
@@ -21,18 +26,19 @@ export default function HomeSection({ children }) {
                     >
                         {/* Heading text and subheading */}
                         <Heading
-                            width='100%'
+                            width='90%'
                             margin='0px'
                             mt='50px'
                             mb='15px'
                             pb='0px'
-                            fontSize='95'
+                            fontSize={{ base: '45px', "2xl": '95px' }}
                             letterSpacing='0px'
                             lineHeight='5.5rem'
                             fontWeight='900'
                             fontStyle='italic'
+
                         >
-                            JUSTIN ABUYUAN
+                            {info['Name']}
                         </Heading>
                         <Text mt='5px'
                             mb='20px' width='100%'
@@ -44,7 +50,7 @@ export default function HomeSection({ children }) {
                             mb='50px' width='100%'
                             fontSize='16px' fontWeight='300'
                         >
-                            <TypingText>i like to code stuff and cry over the SWE job market.</TypingText>
+                            <TypingText>{info['Sub']}</TypingText>
                         </Text>
                         {/* React router */}
                         <MenuButton link='/experience'>EXPERIENCE;</MenuButton>
@@ -63,7 +69,7 @@ export default function HomeSection({ children }) {
                     Duis luctus varius nisi, eu aliquet ex gravida eget. Etiam quis mauris sit amet purus dictum blandit ut ac risus. Maecenas ac porttitor orci, sed bibendum elit. Donec ac metus odio. Quisque lacinia, justo vitae ullamcorper vehicula, tellus mauris imperdiet nulla, porta sollicitudin tellus orci non nunc.
                 </Text>
             </Stack>
-            { children }
+            {children}
         </Stack>
     )
 }

@@ -1,4 +1,5 @@
 // Buttons used on homepage
+import { useState } from 'react';
 import { Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import Colors from '../const/Colors.json';

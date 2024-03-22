@@ -6,7 +6,7 @@ import Colors from '../const/Colors.json';
 export default function ExperiencePage() {
     return (
        <HomeSection>
-            <Text>Experience</Text>
+            <Text height='100vh'>Experience</Text>
        </HomeSection>
     )
 }

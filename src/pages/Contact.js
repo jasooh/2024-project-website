@@ -6,7 +6,7 @@ import Colors from '../const/Colors.json';
 export default function ContactPage() {
     return (
        <HomeSection>
-            <Text>Contact</Text>
+            <Text height='100vh'>Contact</Text>
        </HomeSection>
     )
 }

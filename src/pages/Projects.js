@@ -6,7 +6,7 @@ import Colors from '../const/Colors.json';
 export default function ProjectPage() {
     return (
         <HomeSection>
-            <Text>Projects</Text>
+            <Text height='100vh'>Projects</Text>
         </HomeSection>
     )
 }
