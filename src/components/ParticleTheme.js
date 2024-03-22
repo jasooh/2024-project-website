@@ -15,23 +15,29 @@ export default function ParticleTheme() {
             id="footerParticles"
             init={particlesInit}
             options={{
+
                 fullScreen: { enable: false },
                 background: {
                     color: {
                         value: "#fffff",
                     },
                 },
-                fpsLimit: 120,
+                fpsLimit: 60,
                 particles: {
                     color: {
                         value: Colors['yellow'],
                     },
                     links: {
                         color: Colors['yellow'],
-                        distance: 200,
+                        distance: 180,
                         enable: true,
-                        opacity: 0.4,
+                        opacity: 0.2,
                         width: 1,
+                        triangles: {
+                            enable: true,
+                            color: Colors['yellow'],
+                            opacity: 0.01
+                        }
                     },
                     move: {
                         direction: "none",
@@ -40,7 +46,7 @@ export default function ParticleTheme() {
                             default: "bounce",
                         },
                         random: true,
-                        speed: 1.5,
+                        speed: 2,
                         straight: false,
                     },
                     number: {
@@ -48,10 +54,10 @@ export default function ParticleTheme() {
                             enable: true,
                             area: 600,
                         },
-                        value: 45,
+                        value: 40,
                     },
                     opacity: {
-                        value: 0.8,
+                        value: 0.4,
                     },
                     shape: {
                         type: "triangle",

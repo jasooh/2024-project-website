@@ -11,7 +11,7 @@ export default function Footer() {
                 h='35%'
                 id='footerParticles'
             />
-            <ParticleTheme/>
+            <ParticleTheme />
         </>
     )
 }
