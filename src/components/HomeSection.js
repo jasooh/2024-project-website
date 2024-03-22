@@ -4,7 +4,6 @@ import MenuButton from '../components/MenuButton';
 import TypingText from '../components/TypingText';
 
 import Colors from '../const/Colors.json';
-import { Children } from 'react';
 
 export default function HomeSection(props) {
     const { children, sub } = props;
