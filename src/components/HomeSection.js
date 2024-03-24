@@ -42,7 +42,7 @@ export default function HomeSection({ children }) {
                         </Text>
                         {/* typing effect holder */}
                         <Text mt='5px'
-                            mb='50px' minW='100%'
+                            mb='50px' minH='2rem'
                             fontSize='16px' fontWeight='300'
                             id='typing-holder'
                         >
@@ -63,7 +63,6 @@ export default function HomeSection({ children }) {
                     It was a simple script that teleported the player to another location on the map. <br /><br />
                     Even though it was a script with 3 lines of code, this discovery of writing lines in a computer to make stuff do things ignited a burning passion in me to innovate and create change through the code I write. <br /><br />
                     Now, as an aspiring Management Engineering student at the University of Waterloo, I hope to be at the forefront of this change.
-
                 </Text>
             </Stack>
         </Stack>
