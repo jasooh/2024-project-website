@@ -20,22 +20,22 @@ export default function HomeSection({ children }) {
                     >
                         {/* Heading text and subheading */}
                         <Heading
-                            width='90%'
+                            width={{ base: '60%', md: '80%', "2xl": '90%' }}
                             margin='0px'
                             mt='50px'
                             mb='15px'
                             pb='0px'
-                            fontSize={{ base: '45px', "2xl": '95px' }}
+                            fontSize={{ base: '55px', md: '90px', "2xl": '95px' }}
                             letterSpacing='0px'
-                            lineHeight='5.5rem'
+                            lineHeight={{ base: '3rem', md: '5.5rem' }}
                             fontWeight='900'
                             fontStyle='italic'
-
                         >
-                            {"JUSTIN ABUYUAN"}
+                            JUSTIN ABUYUAN
                         </Heading>
                         <Text mt='5px'
-                            mb='20px' width='100%'
+                            mb='20px'
+                            width={{ base: '40%', "2xl": '100%' }}
                             fontSize='18px' fontWeight='500'
                         >
                             Engineering Student @ the <font color={Colors['accent']}>University of Waterloo</font>

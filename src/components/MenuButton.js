@@ -22,7 +22,7 @@ export default function MenuButton({ children, link }) {
             transform={onPage ? 'translateX(10px)' : '0'}
             // Animation
             transition='0.3s'
-            _hover={{ transform: 'translateX(10px)', color: Colors['yellow'], fontWeight: '800', opacity: '1' }}
+            _hover={{ transform: 'translateX(10px)', fontWeight: '800', opacity: '1' }}
         >
             <Link to={link}>
                 {children}
