@@ -25,7 +25,9 @@ export default function MenuButton({ children, link }) {
             transition='0.3s'
             _hover={{ transform: 'translateX(10px)', color: Colors['yellow'], fontWeight: '800', opacity: '1' }}
         >
-            <Link to={link}>{children}</Link>
+            <Link to={link}>
+                {children}
+            </Link>
         </Text>
     )
 }

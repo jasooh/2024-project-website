@@ -1,12 +1,7 @@
-import { Text } from '@chakra-ui/react';
-import HomeSection from '../components/HomeSection';
-
-import Colors from '../const/Colors.json';
+import TypingText from "../components/TypingText";
 
 export default function ProjectPage() {
     return (
-        <HomeSection sub="hardware and software based projects are my life!">
-            <Text height='100vh'>Projects</Text>
-        </HomeSection>
+        <TypingText>working towards making my own personal robot</TypingText>
     )
 }

@@ -5,13 +5,7 @@ import TypingText from '../components/TypingText';
 
 import Colors from '../const/Colors.json';
 
-export default function HomeSection(props) {
-    const { children, sub } = props;
-    const info = {
-        Name: 'JUSTIN ABUYUAN',
-        Sub: sub
-    }
-
+export default function HomeSection({ children }) {
     return (
         <Stack width='100vw' height='max' position='absolute'
             alignItems='center'
@@ -38,7 +32,7 @@ export default function HomeSection(props) {
                             fontStyle='italic'
 
                         >
-                            {info['Name']}
+                            {"JUSTIN ABUYUAN"}
                         </Heading>
                         <Text mt='5px'
                             mb='20px' width='100%'
@@ -47,10 +41,10 @@ export default function HomeSection(props) {
                             Engineering Student @ the <font color={Colors['yellow']}>University of Waterloo</font>
                         </Text>
                         <Text mt='5px'
-                            mb='50px' width='100%'
+                            mb='50px' minW='100%'
                             fontSize='16px' fontWeight='300'
+                            id='typing-holder'
                         >
-                            <TypingText>{info['Sub']}</TypingText>
                         </Text>
                         {/* React router buttons */}
                         <MenuButton link='/experience'>EXPERIENCE;</MenuButton>

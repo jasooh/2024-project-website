@@ -1,5 +1,7 @@
-import HomeSection from '../components/HomeSection';
+import TypingText from "../components/TypingText";
 
 export default function About() {
-    return (<HomeSection sub="i like to code stuff and cry over the SWE job market."/>)
+    return (
+        <TypingText>i like to code stuff and kiss my girlfriend.</TypingText>
+    )
 }
