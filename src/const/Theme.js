@@ -1,3 +1,4 @@
+// theme for website
 import { extendTheme } from "@chakra-ui/react";
 import Colors from "./Colors.json";
 

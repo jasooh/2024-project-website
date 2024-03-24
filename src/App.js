@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import theme from './const/Theme';
 
-import About from './pages/About';
+import Default from './pages/Default';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
-// components
+// custom components
 import HomeSection from './components/HomeSection';
 import ScrollEvent from './components/Scroll';
 import Footer from './components/Footer';
@@ -20,7 +20,7 @@ function App() {
         <HomeSection /> 
         <ScrollEvent />
         <Routes>
-          <Route path='/' element={<About />} />
+          <Route path='/' element={<Default />} />
           <Route path='/experience' element={<Experience />} />
           <Route path='/projects' element={<Projects />} />
           <Route path='/contact' element={<Contact />} />

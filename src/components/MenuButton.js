@@ -6,7 +6,6 @@ import { useLocation } from 'react-router-dom';
 
 import Colors from '../const/Colors.json';
 
-
 export default function MenuButton({ children, link }) {
     let location = useLocation();
     const onPage = location.pathname === link

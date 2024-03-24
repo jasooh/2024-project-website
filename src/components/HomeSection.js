@@ -1,7 +1,6 @@
-// Section on left side of website that appears on all pages
+// contains all components that do not need to be re-rendered on every page
 import { Box, Text, Stack, Heading } from '@chakra-ui/react';
 import MenuButton from '../components/MenuButton';
-import TypingText from '../components/TypingText';
 
 import Colors from '../const/Colors.json';
 
@@ -10,6 +9,7 @@ export default function HomeSection({ children }) {
         <Stack width='100vw' height='max' position='absolute'
             alignItems='center'
             gap='5rem'
+            id='content-holder'
         >
             <Stack width='60vw' height='max' direction={{ base: 'column', "2xl": 'row' }} id='button-parent'>
                 {/* Heading and Button container */}
@@ -40,6 +40,7 @@ export default function HomeSection({ children }) {
                         >
                             Engineering Student @ the <font color={Colors['yellow']}>University of Waterloo</font>
                         </Text>
+                        {/* typing effect holder */}
                         <Text mt='5px'
                             mb='50px' minW='100%'
                             fontSize='16px' fontWeight='300'
@@ -65,7 +66,6 @@ export default function HomeSection({ children }) {
 
                 </Text>
             </Stack>
-            {children}
         </Stack>
     )
 }

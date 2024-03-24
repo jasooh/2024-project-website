@@ -1,6 +1,6 @@
+// typing effect component
 import React, { useState, useEffect } from 'react';
 import PortalReactDOM from 'react-dom'
-
 
 import { Text, Box, Stack } from '@chakra-ui/react';
 import { keyframes } from '@emotion/react';
