@@ -38,9 +38,9 @@ export default function TypingText({ children }) {
     return PortalReactDOM.createPortal(
       <>
         <Stack direction='row'>
-          <Text minH='2rem' width='max'>{content}</Text>
+          <Text minH={{ base: '4rem', "2xl": '1rem' }} width='max' maxW={{ base: '40%', "2xl": '100%' }} display='inline-block'>{content}</Text>
           {/* Cursor effect */}
-          <Box marginLeft="-5px" backgroundColor="currentcolor" width="1px" height="1.2em" animation={`${blink} 1s step-start infinite`} />
+          {/* <Box marginLeft="-5px" backgroundColor="currentcolor" width="1px" height="1.2em" animation={`${blink} 1s step-start infinite`} /> */}
         </Stack>
       </>,
       document.getElementById('typing-holder')
