@@ -18,7 +18,7 @@ export default function MenuButton({ children, link }) {
             // Skip animation if user has selected
             fontWeight={onPage ? '800' : '300'}
             opacity={onPage ? '1' : '0.7'}
-            color={onPage ? Colors['yellow'] : Colors['light-white']}
+            color={onPage ? Colors['accent'] : Colors['light-white']}
             transform={onPage ? 'translateX(10px)' : '0'}
             // Animation
             transition='0.3s'

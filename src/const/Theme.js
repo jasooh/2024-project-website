@@ -12,7 +12,7 @@ const theme = extendTheme({
       black: Colors['black'],
       white: Colors['white'],
       lightWhite: Colors['light-white'],
-      yellow: Colors['yellow']
+      accent: Colors['accent']
     },
   },
   styles: {

@@ -16,7 +16,6 @@ export default function ParticleTheme() {
             id="footerParticles"
             init={particlesInit}
             options={{
-
                 fullScreen: { enable: false },
                 background: {
                     color: {
@@ -26,17 +25,17 @@ export default function ParticleTheme() {
                 fpsLimit: 60,
                 particles: {
                     color: {
-                        value: Colors['yellow'],
+                        value: Colors['accent'],
                     },
                     links: {
-                        color: Colors['yellow'],
+                        color: Colors['accent'],
                         distance: 180,
                         enable: true,
                         opacity: 0.2,
                         width: 1,
                         triangles: {
                             enable: true,
-                            color: Colors['yellow'],
+                            color: Colors['accent'],
                             opacity: 0.01
                         }
                     },

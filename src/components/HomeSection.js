@@ -38,7 +38,7 @@ export default function HomeSection({ children }) {
                             mb='20px' width='100%'
                             fontSize='18px' fontWeight='500'
                         >
-                            Engineering Student @ the <font color={Colors['yellow']}>University of Waterloo</font>
+                            Engineering Student @ the <font color={Colors['accent']}>University of Waterloo</font>
                         </Text>
                         {/* typing effect holder */}
                         <Text mt='5px'
@@ -59,7 +59,7 @@ export default function HomeSection({ children }) {
                     width={{ base: '100%', "2xl": '40%' }} height='max' maxH='50%'
                     mt='3rem'
                 >
-                    <font color={Colors['yellow']}>In 2015, I wrote my first ever program in Lua using ROBLOX Studio's game engine. </font>
+                    <font color={Colors['accent']}>In 2015, I wrote my first ever program in Lua using ROBLOX Studio's game engine. </font>
                     It was a simple script that teleported the player to another location on the map. <br /><br />
                     Even though it was a script with 3 lines of code, this discovery of writing lines in a computer to make stuff do things ignited a burning passion in me to innovate and create change through the code I write. <br /><br />
                     Now, as an aspiring Management Engineering student at the University of Waterloo, I hope to be at the forefront of this change.
