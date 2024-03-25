@@ -1,5 +1,4 @@
 // Buttons used on homepage
-import { useState } from 'react';
 import { Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
@@ -15,6 +14,7 @@ export default function MenuButton({ children, link }) {
             fontSize='20px'
             margin='0px'
             width='25%'
+            zIndex='1'
             // Skip animation if user has selected
             fontWeight={onPage ? '800' : '300'}
             opacity={onPage ? '1' : '0.7'}

@@ -7,7 +7,7 @@ export default function ScrollEvent() {
     useEffect(() => {
         const handleScroll = () => {
             // Check if the page is scrolled to the top
-            if (window.pageYOffset == 0) {
+            if (window.scrollY === 0) {
                 navigate('/'); // Navigate to a new route
             }
         };
