@@ -21,9 +21,9 @@ export default function ContentContainer({ children }) {
   if (pageLoaded) {
     return PortalReactDOM.createPortal(
         <>
-            <Box height='100vh'>
-                {children}
-            </Box>  
+          <Box height='100vh' width='60vw'>
+              {children}
+          </Box>  
         </>,
         document.getElementById('content-holder')
     );
