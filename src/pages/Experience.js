@@ -25,7 +25,7 @@ export default function ExperiencePage() {
                         </AbsoluteCenter>
                     </Box>
                     {/* Card container */}
-                    <Stack direction='row'>
+                    <Stack direction='column'>
                         <ExperienceCard />
                     </Stack>
                 </Stack>

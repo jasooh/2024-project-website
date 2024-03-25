@@ -9,6 +9,17 @@ export default function MenuButton({ children, link }) {
     let location = useLocation();
     const onPage = location.pathname === link
 
+    const scrollDown = () => {
+        // Scrolls down 100 pixels
+        setTimeout(() => {
+            window.scrollBy({
+                top: window.scrollY === 0 ? '300' : '0',
+                left: 0,
+                behavior: 'smooth' // Enables smooth scrolling
+            });
+        }, 100)
+    };
+
     return (
         <Text
             fontSize='20px'
@@ -24,7 +35,7 @@ export default function MenuButton({ children, link }) {
             transition='0.3s'
             _hover={{ transform: 'translateX(10px)', fontWeight: '800', opacity: '1' }}
         >
-            <Link to={link}>
+            <Link to={link} onClick={scrollDown}>
                 {children}
             </Link>
         </Text>
