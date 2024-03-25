@@ -42,9 +42,10 @@ export default function HomeSection({ children }) {
                         </Text>
                         {/* typing effect holder */}
                         <Text mt='5px'
-                            mb='50px' minH='2rem'
+                            mb='50px' minH='4rem' width='50%'
                             fontSize='16px' fontWeight='300'
                             id='typing-holder'
+                            // borderWidth='1px'
                         >
                         </Text>
                         {/* React router buttons */}

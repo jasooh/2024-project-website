@@ -2,15 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import PortalReactDOM from 'react-dom'
 
-import { Text, Box, Stack } from '@chakra-ui/react';
-import { keyframes } from '@emotion/react';
-
-// Keyframes for blinking cursor
-const blink = keyframes`
-  from, to { opacity: 1 }
-  50% { opacity: 0 }
-`;
-
 export default function TypingText({ children }) {
   const [content, setContent] = useState('');
   const [index, setIndex] = useState(0);
@@ -26,7 +17,7 @@ export default function TypingText({ children }) {
     window.addEventListener('load', handleLoad);
     return () => window.removeEventListener('load', handleLoad);
   }, []);
-
+  // typing effect
   if (index < children.length) {
     setTimeout(() => {
       setContent(content + children.charAt(index));
@@ -36,13 +27,7 @@ export default function TypingText({ children }) {
 
   if (pageLoaded) {
     return PortalReactDOM.createPortal(
-      <>
-        <Stack direction='row'>
-          <Text minH={{ base: '4rem', "2xl": '1rem' }} width='max' maxW={{ base: '40%', "2xl": '100%' }} display='inline-block'>{content}</Text>
-          {/* Cursor effect */}
-          {/* <Box marginLeft="-5px" backgroundColor="currentcolor" width="1px" height="1.2em" animation={`${blink} 1s step-start infinite`} /> */}
-        </Stack>
-      </>,
+      <>{content}</>,
       document.getElementById('typing-holder')
     );
   }
