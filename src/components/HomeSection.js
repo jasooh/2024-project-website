@@ -10,7 +10,6 @@ export default function HomeSection({ children }) {
         <Stack width='100vw' height='max' pb='5rem' position='absolute'
             alignItems='center'
             gap='5rem'
-            id='content-holder'
         >
             <Stack width='60vw' height='max' direction={{ base: 'column', "2xl": 'row' }} id='button-parent'>
                 {/* Heading and Button container */}
@@ -67,6 +66,7 @@ export default function HomeSection({ children }) {
                     Now, as an aspiring Management Engineering student at the University of Waterloo, I hope to be at the forefront of this change.
                 </Text>
             </Stack>
+            <Box height='100vh' width='60vw' id='content-holder' />
         </Stack>
     )
 }

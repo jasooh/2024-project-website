@@ -1,8 +1,10 @@
-import { Text } from "@chakra-ui/react";
+import { Text, Stack, Divider, Box, AbsoluteCenter } from "@chakra-ui/react";
 
 // custom components
 import TypingText from "../components/TypingText";
 import ContentContainer from "../components/ContentContainer";
+
+import Colors from '../const/Colors.json';
 
 export default function ContactPage() {
     return (
@@ -10,7 +12,18 @@ export default function ContactPage() {
             <TypingText>i check my email often :&#41;</TypingText>
             {/* Contact content */}
             <ContentContainer>
-                <Text height='100vh'>Contact</Text>
+            <Stack
+                direction='column'
+                width='100%'
+                textAlign='center'
+            >
+                <Box position='relative' padding='10'>
+                    <Divider />
+                    <AbsoluteCenter bg={Colors['black']} color={Colors['white']} px='4'>
+                        Contact
+                    </AbsoluteCenter>
+                </Box>
+            </Stack>
             </ContentContainer>
         </>
     )
