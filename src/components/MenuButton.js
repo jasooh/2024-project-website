@@ -3,6 +3,7 @@ import { Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
+// color
 import Colors from '../const/Colors.json';
 
 export default function MenuButton({ children, link }) {

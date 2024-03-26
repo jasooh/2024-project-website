@@ -3,6 +3,7 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadSlim } from "tsparticles-slim";
 
+// color
 import Colors from '../const/Colors.json';
 
 export default function ParticleTheme() {

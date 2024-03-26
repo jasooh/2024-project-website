@@ -2,6 +2,7 @@
 import { Image, Stack, Heading, Text, Card, CardBody, Badge } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons';
 
+// color
 import Colors from '../const/Colors.json';
 
 export default function ExperienceCard({ title, role, img, description, badges, link }) {

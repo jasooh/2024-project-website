@@ -4,6 +4,7 @@ import { Text, Stack, Divider, Box, AbsoluteCenter } from "@chakra-ui/react";
 import TypingText from "../components/TypingText";
 import ContentContainer from "../components/ContentContainer";
 
+// color
 import Colors from '../const/Colors.json';
 
 export default function ContactPage() {

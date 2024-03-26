@@ -2,6 +2,7 @@
 import { Box, Text, Stack, Heading } from '@chakra-ui/react';
 import MenuButton from '../components/MenuButton';
 
+// color
 import Colors from '../const/Colors.json';
 
 export default function HomeSection({ children }) {

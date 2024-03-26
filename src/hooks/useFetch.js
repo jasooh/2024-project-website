@@ -13,11 +13,6 @@ export default function useFetch(url) {
                 const json = await res.json();
                 setData(json);
                 setLoading(false);
-                // console.log(json.data[0].attributes.title);
-
-                // json.data.map((experience) => (
-                //     console.log(experience.attributes.title)
-                // ));
             } catch (error) {
                 setError(error);
                 setLoading(false);
