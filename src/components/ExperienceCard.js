@@ -24,7 +24,7 @@ export default function ExperienceCard({ title, role, img, description, badges, 
                             borderRadius='lg'
                         />
                     </Stack>
-                    <Stack ml='2rem' spacing='3' textAlign='left'>
+                    <Stack mb='1.5rem' ml='2rem' spacing='3' textAlign='left'>
                         <Heading as='h4' size='md' color={Colors['accent']}>{ title }</Heading>
                         <Text fontWeight='300' color={Colors['white']}>{ role }</Text>
                         <Stack direction='row'>
@@ -34,7 +34,7 @@ export default function ExperienceCard({ title, role, img, description, badges, 
                         </Stack>
                         <Stack direction='column'>
                             {description.map((value) => (
-                                <Text>{"- " + value}</Text>
+                                <Text fontSize={{ base: '12px', "2xl": '15px' }}>{"- " + value}</Text>
                             ))}
                         </Stack>
                     </Stack>
