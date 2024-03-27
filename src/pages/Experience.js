@@ -40,12 +40,6 @@ export default function ExperiencePage() {
                         width='100%'
                         textAlign='center'
                     >
-                        <Box position='relative' padding='10'>
-                            <Divider />
-                            <AbsoluteCenter bg={Colors['black']} color={Colors['white']} px='4'>
-                                Experience
-                            </AbsoluteCenter>
-                        </Box>
                         {/* Card container */}
                         <Stack direction='column'>
                             {jsonData.data.map(experience => {

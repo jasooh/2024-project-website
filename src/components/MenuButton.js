@@ -9,16 +9,16 @@ import Colors from '../const/Colors.json';
 export default function MenuButton({ children, link }) {
     let location = useLocation();
     const onPage = location.pathname === link
+    const height = document.documentElement.scrollHeight;
 
     const scrollDown = () => {
-        // Scrolls down 100 pixels
         setTimeout(() => {
             window.scrollBy({
-                top: window.scrollY === 0 ? '300' : '0',
+                top: window.scrollY === 0 ? height - (height/1.25) : '0',
                 left: 0,
                 behavior: 'smooth' // Enables smooth scrolling
             });
-        }, 100)
+        }, 250)
     };
 
     return (
