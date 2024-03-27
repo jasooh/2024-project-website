@@ -5,7 +5,7 @@ import { ExternalLinkIcon } from '@chakra-ui/icons';
 // color
 import Colors from '../const/Colors.json';
 
-export default function ExperienceCard({ title, role, img, description, badges, link }) {
+export default function ExperienceCard({ title, role, img, description, badges, date, link }) {
     return (
         <Card width='100%' bg={`rgba(13, 13, 13, 0.8)`}
             transition='0.3s'
@@ -25,8 +25,9 @@ export default function ExperienceCard({ title, role, img, description, badges, 
                         />
                     </Stack>
                     <Stack mb='1.5rem' ml='2rem' spacing='3' textAlign='left'>
-                        <Heading as='h4' size='md' color={Colors['accent']}>{ title }</Heading>
-                        <Text fontWeight='300' color={Colors['white']}>{ role }</Text>
+                        <Heading as='h4' size='md' color={Colors['accent']}>{title}</Heading>
+                        <Text fontWeight='300' color={Colors['white']}>{role}</Text>
+                        <Text fontWeight='200' fontSize='15px' mt='-15px'>{ date }</Text>
                         <Stack direction='row'>
                             {badges.map((value) => (
                                 <Badge colorScheme='yellow'>{value}</Badge>

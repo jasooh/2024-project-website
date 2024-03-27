@@ -17,23 +17,13 @@ export default function ExperiencePage() {
     const url = main + '/api/experiences?populate=*';
     const { jsonData, error, loading } = useFetch(url);
 
-    if (loading) {
+    if (loading || error) {
         console.log("loading")
+        if (error) {console.log("Error: " + error)}
         return (
             <>
                 <ContentContainer>
-                    <PromiseDisplay load={loading}/>
-                </ContentContainer>
-            </>
-        )
-    }
-
-    if (error) {
-        console.log("Error: " + error)
-        return (
-            <>
-                <ContentContainer>
-                    <PromiseDisplay load={loading}/>
+                    <PromiseDisplay load={loading} />
                 </ContentContainer>
             </>
         )
@@ -58,16 +48,21 @@ export default function ExperiencePage() {
                         </Box>
                         {/* Card container */}
                         <Stack direction='column'>
-                            {jsonData.data.map(experience => (
-                                <ExperienceCard key={experience.id}
-                                    title={experience.attributes.title}
-                                    role={experience.attributes.role}
-                                    img={main + experience.attributes.images.data.attributes.url}
-                                    description={experience.attributes.descriptions}
-                                    badges={experience.attributes.badges}
-                                    link={experience.attributes.link}
-                                />
-                            ))}
+                            {jsonData.data.map(experience => {
+                                // date returned depends if end date is placed, show only year
+                                const date = experience.attributes.end ? experience.attributes.start.slice(0, 4) + " - " + experience.attributes.end.slice(0, 4) : experience.attributes.start.slice(0, 4)
+                                return (
+                                    <ExperienceCard key={experience.id}
+                                        title={experience.attributes.title}
+                                        role={experience.attributes.role}
+                                        img={main + experience.attributes.images.data.attributes.url}
+                                        description={experience.attributes.descriptions}
+                                        badges={experience.attributes.badges}
+                                        date={date}
+                                        link={experience.attributes.link}
+                                    />
+                                )
+                            })}
                         </Stack>
                     </Stack>
                 </Fade>
