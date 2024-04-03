@@ -1,4 +1,6 @@
 // Project carousel card
+import React, { useState } from 'react';
+import { Editor, EditorState } from 'draft-js';
 import {
     Image,
     Stack,
@@ -16,12 +18,18 @@ import {
     useDisclosure
 } from '@chakra-ui/react'
 
+// for rich text
+import useText from "../hooks/useText";
 
 // color
 import Colors from '../const/Colors.json';
 
-export default function ProjectCard({ title, date, role, description, img, badges }) {
+export default function ProjectCard({ title, date, role, description, img, badges, content }) {
+    // modal dependencies
     const { isOpen, onOpen, onClose } = useDisclosure()
+    // rich text
+    const text = useText(content);
+    const [state, setEditorState] = useState(EditorState.createWithContent(text));
 
     return (
         <>
@@ -33,11 +41,11 @@ export default function ProjectCard({ title, date, role, description, img, badge
                     <Stack direction='column' opacity='1'>
                         {/* Title & Description */}
                         <Stack mb='1.5rem' spacing='3' textAlign='center'>
-                            <Heading as='h4' size='md' color={Colors['accent']}>{ title }</Heading>
-                            <Text fontWeight='300' color={Colors['white']}>{ role }</Text>
-                            <Text fontWeight='200' fontSize='15px' mt='-5px'>{ date }</Text>
+                            <Heading as='h4' size='md' color={Colors['accent']}>{title}</Heading>
+                            <Text fontWeight='300' color={Colors['white']}>{role}</Text>
+                            <Text fontWeight='200' fontSize='15px' mt='-5px'>{date}</Text>
                             <Stack direction='column'>
-                                <Text fontSize={{ base: '12px', "2xl": '15px' }} textAlign='left'>{ description }</Text>
+                                <Text fontSize={{ base: '12px', "2xl": '15px' }} textAlign='left'>{description}</Text>
                             </Stack>
                         </Stack>
                         {/* Thumbnail */}
@@ -47,7 +55,7 @@ export default function ProjectCard({ title, date, role, description, img, badge
                                 maxH='200px'
                                 minW='full'
                                 objectFit='cover'
-                                src={ img }
+                                src={img}
                                 alt='image'
                                 borderRadius='lg'
                             />
@@ -55,20 +63,20 @@ export default function ProjectCard({ title, date, role, description, img, badge
                         {/* Badges */}
                         <Stack direction='row' mt='5px'>
                             {badges.map((value) => (
-                                    <Badge colorScheme='blue'>{value}</Badge>
+                                <Badge colorScheme='blue'>{value}</Badge>
                             ))}
                         </Stack>
                     </Stack>
                 </CardBody>
             </Card>
             {/* Modal section */}
-            <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose}>
+            <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose} borderWidth='2px'>
                 <ModalOverlay />
-                <ModalContent>
-                    <ModalHeader>Black Magic II: Phantom's Causatum</ModalHeader>
+                <ModalContent minW='35%' minH='50%'>
+                    <ModalHeader>{ title }</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        extra detail :D
+                        <Editor editorState={state} onChange={setEditorState} readOnly />
                     </ModalBody>
                 </ModalContent>
             </Modal>

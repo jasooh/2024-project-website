@@ -15,7 +15,7 @@ export default function ProjectPage() {
     const main = "http://localhost:1337"
     const url = main + '/api/projects?populate=*';
     const { jsonData, error, loading } = useFetch(url);
-
+    
     if (loading || error) {
         console.log("loading")
         if (error) {console.log("Error: " + error)}
@@ -35,7 +35,6 @@ export default function ProjectPage() {
             <ContentContainer>
                 {/* Carousel container */}
                 <ProjectCarousel gap={32}>
-                    {/* {console.log("DATA: " + jsonData.data[0].attributes.title )} */}
                     {jsonData.data.map(project => {
                         // date returned depends if end date is placed, show only year
                         const date = project.attributes.end ? project.attributes.start.slice(0, 4) + " - " + project.attributes.end.slice(0, 4) : project.attributes.start.slice(0, 4)
@@ -47,6 +46,7 @@ export default function ProjectPage() {
                                 description={project.attributes.description}
                                 img={main + project.attributes.thumbnail.data.attributes.url}
                                 badges={project.attributes.badges}
+                                content={project.attributes.extra}
                             />
                         )
                     })}
