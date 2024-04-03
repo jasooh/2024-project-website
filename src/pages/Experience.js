@@ -1,4 +1,4 @@
-import { Stack, Divider, Box, AbsoluteCenter, Fade } from "@chakra-ui/react";
+import { Stack, Fade } from "@chakra-ui/react";
 
 // custom components
 import TypingText from "../components/TypingText";

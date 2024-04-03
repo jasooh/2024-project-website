@@ -1,8 +1,15 @@
-import { Text, Stack, Divider, Box, AbsoluteCenter } from "@chakra-ui/react";
+import { Text, Stack, VStack, Heading, Flex, Button } from "@chakra-ui/react";
+import { useState, useEffect } from "react";
 
 // custom components
 import TypingText from "../components/TypingText";
 import ContentContainer from "../components/ContentContainer";
+import PromiseDisplay from "../components/PromiseDisplay";
+import ProjectCarousel from "../components/ProjectCarousel";
+import ProjectCard from "../components/ProjectCard";
+
+// custom hooks
+import useFetch from "../hooks/useFetch";
 
 // color
 import Colors from '../const/Colors.json';
@@ -13,18 +20,11 @@ export default function ProjectPage() {
             <TypingText>working towards making my own robot army.</TypingText>
             {/* Project content */}
             <ContentContainer>
-            <Stack
-                direction='column'
-                width='100%'
-                textAlign='center'
-            >
-                <Box position='relative' padding='10'>
-                    <Divider />
-                    <AbsoluteCenter bg={Colors['black']} color={Colors['white']} px='4'>
-                        Projects
-                    </AbsoluteCenter>
-                </Box>
-            </Stack>
+                {/* Carousel container */}
+                <ProjectCarousel gap={32}>
+                    <ProjectCard />
+                    <ProjectCard />
+                </ProjectCarousel>
             </ContentContainer>
         </>
     )

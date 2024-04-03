@@ -41,12 +41,11 @@ export default function HomeSection({ children }) {
                         >
                             Engineering Student @ the <font color={Colors['accent']}>University of Waterloo</font>
                         </Text>
-                        {/* typing effect holder */}
+                        {/* Typing effect holder */}
                         <Text mt='5px'
                             mb='50px' minH='4rem' width='50%'
                             fontSize='16px' fontWeight='300'
                             id='typing-holder'
-                        // borderWidth='1px'
                         >
                         </Text>
                         {/* React router buttons */}
@@ -67,7 +66,7 @@ export default function HomeSection({ children }) {
                     Now, as an aspiring Management Engineering student at the University of Waterloo, I hope to be at the forefront of this change.
                 </Text>
             </Stack>
-            <Box height='100vh' width='60vw' id='content-holder' />
+            <Box height='50vh' width='60vw' id='content-holder' />
         </Stack>
     )
 }
