@@ -1,4 +1,4 @@
-import { Stack, Fade } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 
 // custom components
 import TypingText from "../components/TypingText";
@@ -34,32 +34,30 @@ export default function ExperiencePage() {
             <TypingText>developing skills to become a software engineer - one co-op at a time.</TypingText>
             {/* Experience content */}
             <ContentContainer>
-                <Fade in={true}>
-                    <Stack
-                        direction='column'
-                        width='100%'
-                        textAlign='center'
-                    >
-                        {/* Card container */}
-                        <Stack direction='column'>
-                            {jsonData.data.map(experience => {
-                                // date returned depends if end date is placed, show only year
-                                const date = experience.attributes.end ? experience.attributes.start.slice(0, 4) + " - " + experience.attributes.end.slice(0, 4) : experience.attributes.start.slice(0, 4)
-                                return (
-                                    <ExperienceCard key={experience.id}
-                                        title={experience.attributes.title}
-                                        role={experience.attributes.role}
-                                        img={main + experience.attributes.images.data.attributes.url}
-                                        description={experience.attributes.descriptions}
-                                        badges={experience.attributes.badges}
-                                        date={date}
-                                        link={experience.attributes.link}
-                                    />
-                                )
-                            })}
-                        </Stack>
+                <Stack
+                    direction='column'
+                    width='100%'
+                    textAlign='center'
+                >
+                    {/* Card container */}
+                    <Stack direction='column'>
+                        {jsonData.data.map(experience => {
+                            // date returned depends if end date is placed, show only year
+                            const date = experience.attributes.end ? experience.attributes.start.slice(0, 4) + " - " + experience.attributes.end.slice(0, 4) : experience.attributes.start.slice(0, 4)
+                            return (
+                                <ExperienceCard key={experience.id}
+                                    title={experience.attributes.title}
+                                    role={experience.attributes.role}
+                                    img={main + experience.attributes.images.data.attributes.url}
+                                    description={experience.attributes.descriptions}
+                                    badges={experience.attributes.badges}
+                                    date={date}
+                                    link={experience.attributes.link}
+                                />
+                            )
+                        })}
                     </Stack>
-                </Fade>
+                </Stack>
             </ContentContainer>
         </>
     )

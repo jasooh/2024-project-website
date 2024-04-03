@@ -20,7 +20,7 @@ import {
 // color
 import Colors from '../const/Colors.json';
 
-export default function ProjectCard() {
+export default function ProjectCard({ title, date, role, description, img, badges }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
@@ -33,10 +33,11 @@ export default function ProjectCard() {
                     <Stack direction='column' opacity='1'>
                         {/* Title & Description */}
                         <Stack mb='1.5rem' spacing='3' textAlign='center'>
-                            <Heading as='h4' size='md' color={Colors['accent']}>Black Magic II: Phantom's Causatum</Heading>
-                            <Text fontWeight='600' fontSize='15px' mt='-5px'>2021</Text>
+                            <Heading as='h4' size='md' color={Colors['accent']}>{ title }</Heading>
+                            <Text fontWeight='300' color={Colors['white']}>{ role }</Text>
+                            <Text fontWeight='200' fontSize='15px' mt='-5px'>{ date }</Text>
                             <Stack direction='column'>
-                                <Text fontSize={{ base: '12px', "2xl": '15px' }}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</Text>
+                                <Text fontSize={{ base: '12px', "2xl": '15px' }} textAlign='left'>{ description }</Text>
                             </Stack>
                         </Stack>
                         {/* Thumbnail */}
@@ -46,15 +47,16 @@ export default function ProjectCard() {
                                 maxH='200px'
                                 minW='full'
                                 objectFit='cover'
-                                src='https://cdn.discordapp.com/attachments/1134146495717851246/1224944220373127261/test.gif?ex=661f5534&is=660ce034&hm=9a291ee8134ac853df0e5e466322ccff6dcc08ec3998a508e6d6817621d9dace&'
+                                src={ img }
                                 alt='image'
                                 borderRadius='lg'
                             />
                         </Stack>
                         {/* Badges */}
                         <Stack direction='row' mt='5px'>
-                            <Badge colorScheme='yellow'>LUA</Badge>
-                            <Badge colorScheme='yellow'>BLENDER</Badge>
+                            {badges.map((value) => (
+                                    <Badge colorScheme='blue'>{value}</Badge>
+                            ))}
                         </Stack>
                     </Stack>
                 </CardBody>
