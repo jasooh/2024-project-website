@@ -4,12 +4,15 @@
   "private": true,
   "homepage": "https://jasooh.github.io/2024-project-website",
   "dependencies": {
+    "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
+    "@draft-js-plugins/image": "^4.1.4",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "draft-js": "^0.11.7",
     "framer-motion": "^11.0.5",
     "gh-pages": "^6.1.1",
     "react": "^18.2.0",
@@ -46,5 +49,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }

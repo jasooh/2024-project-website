@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import PortalReactDOM from 'react-dom'
 
-import { Box } from '@chakra-ui/react';
+import { Fade } from '@chakra-ui/react';
 
 export default function ContentContainer({ children }) {
   const [pageLoaded, setPageLoaded] = useState(false);
@@ -20,11 +20,7 @@ export default function ContentContainer({ children }) {
 
   if (pageLoaded) {
     return PortalReactDOM.createPortal(
-        <>
-            <Box height='100vh'>
-                {children}
-            </Box>  
-        </>,
+        <><Fade in={true}>{children}</Fade></>,
         document.getElementById('content-holder')
     );
   }

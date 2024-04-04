@@ -33,6 +33,9 @@ const theme = extendTheme({
         color: 'brand.black',
         textShadow: '0.05rem 0.05rem 0 #FFFFFF, -0.05rem 0.05rem 0 #FFFFFF, 0.05rem -0.05rem 0 #FFFFFF, -0.05rem -0.05rem 0 #FFFFFF' // outline effect
       },
+      'h4': {
+        color: 'brand.white'
+      },
       'p': {
         color: 'brand.lightWhite'
       }

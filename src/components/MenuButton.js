@@ -3,11 +3,23 @@ import { Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 
+// color
 import Colors from '../const/Colors.json';
 
 export default function MenuButton({ children, link }) {
     let location = useLocation();
     const onPage = location.pathname === link
+    const height = document.documentElement.scrollHeight;
+
+    const scrollDown = () => {
+        setTimeout(() => {
+            window.scrollBy({
+                top: window.scrollY === 0 ? height - (height/1.25) : '0',
+                left: 0,
+                behavior: 'smooth' // Enables smooth scrolling
+            });
+        }, 250)
+    };
 
     return (
         <Text
@@ -24,7 +36,7 @@ export default function MenuButton({ children, link }) {
             transition='0.3s'
             _hover={{ transform: 'translateX(10px)', fontWeight: '800', opacity: '1' }}
         >
-            <Link to={link}>
+            <Link to={link} onClick={scrollDown}>
                 {children}
             </Link>
         </Text>

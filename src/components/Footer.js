@@ -10,6 +10,7 @@ export default function Footer() {
                 w='100%'
                 h='35%'
                 id='footerParticles'
+                zIndex='-1'
             />
             <ParticleTheme />
         </>
