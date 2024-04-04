@@ -1,5 +1,8 @@
 // 
 
+// color
+import Colors from '../const/Colors.json';
+
 import React, {
     useLayoutEffect,
     useCallback,
@@ -210,12 +213,11 @@ const Slider = ({
                     value={percentage(activeItem, positions.length - constraint)}
                     alignSelf="center"
                     borderRadius="2px"
-                    bg="base.d100"
                     flex={1}
                     h="3px"
                     sx={{
                         "> div": {
-                            backgroundColor: "gray.400"
+                            backgroundColor: Colors['accent']
                         }
                     }}
                 />

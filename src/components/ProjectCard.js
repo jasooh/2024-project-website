@@ -38,18 +38,17 @@ export default function ProjectCard({ title, date, role, description, img, badge
                 _hover={{ bg: 'rgba(255, 255, 255, 0.075)', transform: 'translateY(-5px)' }}
             >
                 <CardBody width='100%' onClick={onOpen}>
-                    <Stack direction='column' opacity='1'>
+                    <Stack height='100%' direction='column' justifyContent='space-between' opacity='1'>
                         {/* Title & Description */}
                         <Stack mb='1.5rem' spacing='3' textAlign='center'>
                             <Heading as='h4' size='md' color={Colors['accent']}>{title}</Heading>
                             <Text fontWeight='300' color={Colors['white']}>{role}</Text>
                             <Text fontWeight='200' fontSize='15px' mt='-5px'>{date}</Text>
-                            <Stack direction='column'>
-                                <Text fontSize={{ base: '12px', "2xl": '15px' }} textAlign='left'>{description}</Text>
-                            </Stack>
+
+                            <Text fontSize={{ base: '12px', "2xl": '15px' }} textAlign='left'>{description}</Text>
                         </Stack>
                         {/* Thumbnail */}
-                        <Stack justifyContent='space-around' alignItems='center' minW='200px' minH='200px'>
+                        <Stack direction='column' justifyContent='space-around' minW='200px' minH='200px'>
                             <Image
                                 minH='200px'
                                 maxH='200px'
@@ -59,12 +58,11 @@ export default function ProjectCard({ title, date, role, description, img, badge
                                 alt='image'
                                 borderRadius='lg'
                             />
-                        </Stack>
-                        {/* Badges */}
-                        <Stack direction='row' mt='5px'>
-                            {badges.map((value) => (
-                                <Badge colorScheme='blue'>{value}</Badge>
-                            ))}
+                            <Stack direction='row' mt='5px'>
+                                {badges.map((value) => (
+                                    <Badge colorScheme='yellow'>{value}</Badge>
+                                ))}
+                            </Stack>
                         </Stack>
                     </Stack>
                 </CardBody>
