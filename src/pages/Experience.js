@@ -12,9 +12,12 @@ import useFetch from "../hooks/useFetch";
 // color
 import Colors from '../const/Colors.json';
 
+// strapi
+const main = "http://35.183.14.220:1337"
+const url = main + '/api/experiences?populate=*';
+
 export default function ExperiencePage() {
-    const main = "http://localhost:1337"
-    const url = main + '/api/experiences?populate=*';
+
     const { jsonData, error, loading } = useFetch(url);
 
     if (loading || error) {
