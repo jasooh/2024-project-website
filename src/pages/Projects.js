@@ -16,6 +16,7 @@ export default function ProjectPage() {
     const url = main + '/api/projects?populate=*';
     const { jsonData, error, loading } = useFetch(url);
     
+
     if (loading || error) {
         console.log("loading")
         if (error) {console.log("Error: " + error)}

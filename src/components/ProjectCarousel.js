@@ -211,6 +211,7 @@ const Slider = ({
 
                 <Progress
                     value={percentage(activeItem, positions.length - constraint)}
+                    transition='0.3s'
                     alignSelf="center"
                     borderRadius="2px"
                     flex={1}
