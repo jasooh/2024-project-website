@@ -73,7 +73,7 @@ export default function ProjectCard({ title, date, role, description, img, badge
             <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose} borderWidth='2px'>
                 <ModalOverlay />
                 <ModalContent minW='35%' minH='50%'>
-                    <ModalHeader>{ title }</ModalHeader>
+                    <ModalHeader>{title}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
                         <Editor editorState={state} onChange={setEditorState} readOnly />

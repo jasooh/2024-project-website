@@ -5,10 +5,8 @@ export default function useText(jsonData) {
     const blocks = jsonData.map((section) => {
         const text = section.children.map((child) => child.text).join('');
         const inlineStyleRanges = [];
-        const entityRanges = [];
-
         let offset = 0;
-        let entityCounter = 0;
+
         section.children.forEach((child) => {
             if (child.bold) {
                 inlineStyleRanges.push({
@@ -26,8 +24,9 @@ export default function useText(jsonData) {
             inlineStyleRanges,
         };
     });
+
     const entityMap = {};
-    const formatted = convertFromRaw({ blocks, entityMap })
+    const formatted = convertFromRaw({ blocks, entityMap });
 
     return formatted;
 }
