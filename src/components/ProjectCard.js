@@ -57,7 +57,6 @@ export default function ProjectCard({ title, date, role, description, img, badge
                                 src={img}
                                 alt='image'
                                 borderRadius='lg'
-                                userSelect='none'
                                 pointerEvents='none'
                             />
                             <Stack direction='row' mt='5px'>

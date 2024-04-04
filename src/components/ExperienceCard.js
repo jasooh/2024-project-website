@@ -22,6 +22,7 @@ export default function ExperienceCard({ title, role, img, description, badges, 
                             src={img}
                             alt='image'
                             borderRadius='lg'
+                            pointerEvents='none'
                         />
                     </Stack>
                     <Stack mb='1.5rem' ml='2rem' spacing='3' textAlign='left'>
