@@ -13,7 +13,7 @@ import useFetch from "../hooks/useFetch";
 import Colors from '../const/Colors.json';
 
 // strapi
-const main = "https://cms-justin-abuyuan.xyz/"
+const main = "https://cms-justin-abuyuan.xyz"
 const url = main + '/api/experiences?populate=*';
 
 export default function ExperiencePage() {
