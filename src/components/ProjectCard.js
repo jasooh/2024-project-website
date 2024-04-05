@@ -71,7 +71,7 @@ export default function ProjectCard({ title, date, role, description, img, badge
             {/* Modal section */}
             <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose} borderWidth='2px'>
                 <ModalOverlay />
-                <ModalContent minW='35%' minH='50%'>
+                <ModalContent backgroundColor={Colors['black']} color={Colors['white']} minW='35%' minH='50%'>
                     <ModalHeader>{title}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
