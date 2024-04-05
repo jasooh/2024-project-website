@@ -2,7 +2,7 @@
   "name": "2024-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jasooh.github.io/2024-project-website",
+  "homepage": "https://portfolio.cms-justin-abuyuan.xyz",
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
