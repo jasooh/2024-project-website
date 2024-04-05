@@ -59,7 +59,7 @@ export default function ProjectCard({ title, date, role, description, img, badge
                                 borderRadius='lg'
                                 pointerEvents='none'
                             />
-                            <Stack direction='row' mt='5px'>
+                            <Stack direction='row' mt='5px' flexWrap='flex'>
                                 {badges.map((value) => (
                                     <Badge colorScheme='yellow'>{value}</Badge>
                                 ))}
