@@ -72,7 +72,7 @@ export default function ProjectCard({ title, date, role, description, img, badge
             <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose} borderWidth='2px'>
                 <ModalOverlay />
                 <ModalContent backgroundColor={Colors['black']} color={Colors['white']} minW='35%' minH='50%'>
-                    <ModalHeader>{title}</ModalHeader>
+                    <ModalHeader color={Colors['accent']}>{title}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
                         <Editor editorState={state} onChange={setEditorState} readOnly />
