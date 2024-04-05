@@ -24,10 +24,11 @@ export default function ContactPage() {
                         <Stack direction='column' alignItems='center'>
                             {/* Name */}
                             <Heading as='h4' size='lg'>Justin Abuyuan</Heading>
-                            <Stack direction='row' alignItems='center' mb='10px'>
+                            <Stack direction='row' alignItems='center' mb='20px'>
                                 <ChevronRightIcon color={Colors['accent']} />
                                 <Text>abuyuanjustin@gmail.com</Text>
                             </Stack>
+                            {/* Resume button */}
                             <Box transition='0.3s' p='3' rounded='3xl' borderWidth='2px'
                                 _hover={{ bg: Colors['white'], rounded: 'xl' }}
                                 onClick={() => window.open('https://www.cms-justin-abuyuan.xyz/uploads/2024_Resume_JA_60fc7b6b33.pdf', '_blank', 'noopener, noreferrer')}
@@ -42,9 +43,8 @@ export default function ContactPage() {
                                     <Text transition='0.3s' className="resume-text" color={Colors['white']}>Resume</Text>
                                 </Stack>
                             </Box>
-
                             {/* Icons */}
-                            <Stack direction='row' gap='1rem'>
+                            <Stack direction='row' gap='1rem' mt='15px' mb='30px'>
                                 <Box transition='0.3s' _hover={{ color: Colors['accent'], transform: 'scale(1.1)' }} 
                                     onClick={() => window.open('https://github.com/jasooh', '_blank', 'noopener, noreferrer')}
                                 >
@@ -56,6 +56,8 @@ export default function ContactPage() {
                                     <FaLinkedin color={Colors['white']} size='50px' />
                                 </Box>
                             </Stack>
+                            <Text>Built with love using <b>React</b> and <b>ChakraUI</b>, and deployed using <b>GitHub Pages</b>.</Text>
+                            <Text>© 2024 Justin Abuyuan. All rights reserved.</Text>
                         </Stack>
                     </Box>
                 </Stack>
