@@ -1,6 +1,7 @@
 // Experience card
 import { Image, Stack, Heading, Text, Card, CardBody, Badge } from '@chakra-ui/react'
 import { ExternalLinkIcon } from '@chakra-ui/icons';
+import ImageContainer from './ImageContainer';
 
 // color
 import Colors from '../const/Colors.json';
@@ -14,16 +15,7 @@ export default function ExperienceCard({ title, role, img, description, badges, 
             <CardBody width='100%' onClick={() => window.open(link, '_blank', 'noopener, noreferrer')}>
                 <Stack direction='row' opacity='1'>
                     <Stack justifyContent='space-around' alignItems='center' minW='200px' minH='200px' display={{ base: 'none', md: 'inline-block' }}>
-                        <Image
-                            minH='200px'
-                            maxH='200px'
-                            minW='full'
-                            objectFit='cover'
-                            src={img}
-                            alt='image'
-                            borderRadius='lg'
-                            pointerEvents='none'
-                        />
+                        <ImageContainer src={img} />
                     </Stack>
                     <Stack mb='1.5rem' ml='2rem' spacing='3' textAlign='left'>
                         <Heading as='h4' size='md' color={Colors['accent']}>{ title }</Heading>

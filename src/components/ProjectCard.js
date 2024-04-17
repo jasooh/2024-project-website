@@ -1,5 +1,6 @@
 // Project carousel card
 import React, { useState } from 'react';
+import ImageContainer from './ImageContainer';
 import {
     Image,
     Stack,
@@ -19,6 +20,7 @@ import {
 
 // for rich text
 import { BlocksRenderer, BlocksContent } from '@strapi/blocks-react-renderer';
+
 // color
 import Colors from '../const/Colors.json';
 
@@ -46,16 +48,7 @@ export default function ProjectCard({ title, date, role, description, img, badge
                         </Stack>
                         {/* Thumbnail */}
                         <Stack direction='column' justifyContent='space-around' minW='200px' minH='200px'>
-                            <Image
-                                minH='200px'
-                                maxH='200px'
-                                minW='full'
-                                objectFit='cover'
-                                src={img}
-                                alt='image'
-                                borderRadius='lg'
-                                pointerEvents='none'
-                            />
+                            <ImageContainer src={img} />
                             <Stack direction='row' mt='5px' flexWrap='wrap'>
                                 {badges.map((value) => (
                                     <Badge colorScheme='yellow'>{value}</Badge>
@@ -74,7 +67,20 @@ export default function ProjectCard({ title, date, role, description, img, badge
                     <ModalBody>
                         <BlocksRenderer content={content} 
                             blocks={{
-                                paragraph: ({ children }) => <Text color={Colors['white']}>{children}</Text>
+                                paragraph: ({ children }) => <Text color={Colors['white']}>{children}</Text>,
+                                image: ({ image }) => (
+                                    <Stack width='100%' alignItems='center'>
+                                        <Image
+                                            minH='200px'
+                                            maxH='200px'
+                                            objectFit='cover'
+                                            src={image.url}
+                                            alt='image'
+                                            borderRadius='lg'
+                                            pointerEvents='none'
+                                        />
+                                    </Stack>
+                                )
                             }}
                         />
                     </ModalBody>
