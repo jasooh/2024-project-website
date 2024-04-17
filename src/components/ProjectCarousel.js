@@ -258,9 +258,8 @@ const Track = ({
     const handleDragStart = () => setDragStartPosition(positions[activeItem]);
 
     const handleDragEnd = (_, info) => {
-        console.log(info);
         const distance = info.offset.x;
-        const velocity = info.velocity.x * multiplier;
+        const velocity = info.velocity.x * (multiplier / 2);
         const direction = velocity < 0 || distance < 0 ? 1 : -1;
 
         const extrapolatedPosition =

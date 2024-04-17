@@ -6,6 +6,7 @@ import {
     Stack,
     Heading,
     Text,
+    Link,
     Card,
     CardBody,
     Badge,
@@ -19,7 +20,7 @@ import {
 } from '@chakra-ui/react'
 
 // for rich text
-import { BlocksRenderer, BlocksContent } from '@strapi/blocks-react-renderer';
+import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 
 // color
 import Colors from '../const/Colors.json';
@@ -73,14 +74,15 @@ export default function ProjectCard({ title, date, role, description, img, badge
                                         <Image
                                             minH='200px'
                                             maxH='200px'
-                                            objectFit='cover'
+                                            // objectFit='cover'
                                             src={image.url}
                                             alt='image'
-                                            borderRadius='lg'
+                                            borderRadius='md'
                                             pointerEvents='none'
                                         />
                                     </Stack>
-                                )
+                                ),
+                                link: ({ children, url }) => <Link target='_blank' href={url} color={Colors['accent']}>{children}</Link>
                             }}
                         />
                     </ModalBody>
