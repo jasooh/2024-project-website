@@ -39,7 +39,7 @@ export default function ProjectPage() {
             <ContentContainer>
                 {/* Carousel container */}
                 <ProjectCarousel gap={32}>
-                    {jsonData.data.map(project => {
+                    {jsonData.data.map((project) => {
                         // date returned depends if end date is placed, show only year
                         const date = project.attributes.end ? project.attributes.start.slice(0, 4) + " - " + project.attributes.end.slice(0, 4) : project.attributes.start.slice(0, 4)
                         return (

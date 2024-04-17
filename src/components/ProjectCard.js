@@ -1,11 +1,12 @@
 // Project carousel card
 import React, { useState } from 'react';
-import { Editor, EditorState } from 'draft-js';
+import ImageContainer from './ImageContainer';
 import {
     Image,
     Stack,
     Heading,
     Text,
+    Link,
     Card,
     CardBody,
     Badge,
@@ -19,7 +20,7 @@ import {
 } from '@chakra-ui/react'
 
 // for rich text
-import useText from "../hooks/useText";
+import { BlocksRenderer } from '@strapi/blocks-react-renderer';
 
 // color
 import Colors from '../const/Colors.json';
@@ -28,8 +29,7 @@ export default function ProjectCard({ title, date, role, description, img, badge
     // modal dependencies
     const { isOpen, onOpen, onClose } = useDisclosure()
     // rich text
-    const text = useText(content);
-    const [state, setEditorState] = useState(EditorState.createWithContent(text));
+    // const text = useText(content);
 
     return (
         <>
@@ -49,16 +49,7 @@ export default function ProjectCard({ title, date, role, description, img, badge
                         </Stack>
                         {/* Thumbnail */}
                         <Stack direction='column' justifyContent='space-around' minW='200px' minH='200px'>
-                            <Image
-                                minH='200px'
-                                maxH='200px'
-                                minW='full'
-                                objectFit='cover'
-                                src={img}
-                                alt='image'
-                                borderRadius='lg'
-                                pointerEvents='none'
-                            />
+                            <ImageContainer src={img} />
                             <Stack direction='row' mt='5px' flexWrap='wrap'>
                                 {badges.map((value) => (
                                     <Badge colorScheme='yellow'>{value}</Badge>
@@ -72,10 +63,28 @@ export default function ProjectCard({ title, date, role, description, img, badge
             <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose} borderWidth='2px'>
                 <ModalOverlay />
                 <ModalContent backgroundColor={Colors['black']} color={Colors['white']} minW='35%' minH='50%'>
-                    <ModalHeader>{title}</ModalHeader>
+                    <ModalHeader color={Colors['accent']}>{title}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <Editor editorState={state} onChange={setEditorState} readOnly />
+                        <BlocksRenderer content={content} 
+                            blocks={{
+                                paragraph: ({ children }) => <Text color={Colors['white']}>{children}</Text>,
+                                image: ({ image }) => (
+                                    <Stack width='100%' alignItems='center'>
+                                        <Image
+                                            minH='200px'
+                                            maxH='200px'
+                                            // objectFit='cover'
+                                            src={image.url}
+                                            alt='image'
+                                            borderRadius='md'
+                                            pointerEvents='none'
+                                        />
+                                    </Stack>
+                                ),
+                                link: ({ children, url }) => <Link target='_blank' href={url} color={Colors['accent']}>{children}</Link>
+                            }}
+                        />
                     </ModalBody>
                 </ModalContent>
             </Modal>
