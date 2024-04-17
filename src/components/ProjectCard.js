@@ -1,6 +1,5 @@
 // Project carousel card
 import React, { useState } from 'react';
-import { Editor, EditorState } from 'draft-js';
 import {
     Image,
     Stack,
@@ -19,8 +18,7 @@ import {
 } from '@chakra-ui/react'
 
 // for rich text
-import useText from "../hooks/useText";
-
+import { BlocksRenderer, BlocksContent } from '@strapi/blocks-react-renderer';
 // color
 import Colors from '../const/Colors.json';
 
@@ -28,8 +26,7 @@ export default function ProjectCard({ title, date, role, description, img, badge
     // modal dependencies
     const { isOpen, onOpen, onClose } = useDisclosure()
     // rich text
-    const text = useText(content);
-    const [state, setEditorState] = useState(EditorState.createWithContent(text));
+    // const text = useText(content);
 
     return (
         <>
@@ -75,7 +72,11 @@ export default function ProjectCard({ title, date, role, description, img, badge
                     <ModalHeader color={Colors['accent']}>{title}</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>
-                        <Editor editorState={state} onChange={setEditorState} readOnly />
+                        <BlocksRenderer content={content} 
+                            blocks={{
+                                paragraph: ({ children }) => <Text color={Colors['white']}>{children}</Text>
+                            }}
+                        />
                     </ModalBody>
                 </ModalContent>
             </Modal>
