@@ -26,7 +26,7 @@ export default function HomeSection({ children }) {
                             mt='50px'
                             mb='15px'
                             pb='0px'
-                            fontSize={{ base: '55px', md: '90px', "2xl": '95px' }}
+                            fontSize={{ base: '50px', md: '90px', "2xl": '95px' }}
                             letterSpacing='0px'
                             lineHeight={{ base: '3rem', md: '5.5rem' }}
                             fontWeight='900'
@@ -43,15 +43,19 @@ export default function HomeSection({ children }) {
                         </Text>
                         {/* Typing effect holder */}
                         <Text mt='5px'
-                            mb='50px' minH='4rem' width='50%'
+                            mb='50px' minH='7rem' 
+                            width={{ base: '30%', xl: '50%' }}
                             fontSize='16px' fontWeight='300'
                             id='typing-holder'
                         >
                         </Text>
                         {/* React router buttons */}
-                        <MenuButton link='/experience'>EXPERIENCE;</MenuButton>
-                        <MenuButton link='/projects'>PROJECTS;</MenuButton>
-                        <MenuButton link='/contact'>CONTACT;</MenuButton>
+                        <Stack direction='column' gap='5px'>
+                            <MenuButton link='/experience'>EXPERIENCE;</MenuButton>
+                            <MenuButton link='/projects'>PROJECTS;</MenuButton>
+                            <MenuButton link='/contact'>CONTACT;</MenuButton>
+                        </Stack>
+
                     </Stack>
                 </Box>
                 {/* Info Area */}
