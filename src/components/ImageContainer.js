@@ -1,11 +1,12 @@
 import { Image } from "@chakra-ui/react";
 
-export default function ImageContainer({ src, width, height }) {
+export default function ImageContainer({ src }) {
     return (
         <Image
-            minH={height ? height : '200px'}
-            maxH={height ? height : '200px'}
-            // minW='full'
+            minH='200px'
+            maxH='200px'
+            aspectRatio='1'
+            minW='full'
             objectFit='cover'
             src={src}
             alt='image'
